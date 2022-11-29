@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: Orval Null in Enum Problem
+  version: 1.0.0
+paths:
+  /foo:
+    get:
+      operationId: getFoo
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Foo"
+components:
+  schemas:
+    Foo:
+      type: number
+      nullable: true
+      enum:
+        - null
