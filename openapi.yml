@@ -18,5 +18,9 @@ components:
     Foo:
       type: number
       nullable: true
+      # x-enumNames:
+      #   - "1"
+      #   - "null"
       enum:
+        - "1"
         - null
